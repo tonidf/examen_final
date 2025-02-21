@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div>
+        <form action="" method="post">
+            <div>
+                {{form.username.label}}
+                {{form.username}}
+            </div>
+            <div>
+                {{form.password.label}}
+                {{form.password}}
+            </div>
+            <div>
+                {{form.email.label}}
+                {{form.email}}
+            </div>
+            {{form.submit}}
+        </form>
+        <span>Ya tienes cuenta? </span><a href="{{url_for('login')}}">Iniciar sesion</a>
+    </div>
+{% endblock %}

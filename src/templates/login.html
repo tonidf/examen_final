@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div>
+    <form action="" method="post">
+        <div>
+            {{form.username.label}}
+            {{form.username}}
+        </div>
+        <div>
+            {{form.password.label}}
+            {{form.password}}
+        </div>
+        {{form.submit}}
+    </form>
+    <span>No tienes cuenta? </span><a href="{{url_for('register')}}">Registrate</a>
+</div>
+{% endblock %}
